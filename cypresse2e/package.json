@@ -1,0 +1,14 @@
+{
+  "name": "cypresse2e",
+  "version": "1.0.0",
+  "description": "End to End ui automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "author": "Md Zaman",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^7.6.0"
+  }
+}
