@@ -4,7 +4,15 @@
   "description": "End to End ui automation",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress open"
+    "cy:open": "npx cypress open --env allure=true --browser chrome",
+    "cy:open:specific:env":"cypress_baseUrl=https://qa.goole.com5 cypress run --env allure=true",
+    "pretest": "rm -r allure-results/ allure-report cypress/screenshots || true",
+    "test": "npx cypress run --env allure=true",
+    "posttest": "allure generate allure-results --clean -o allure-report && allure open allure-report",
+    "cy:open-dev": "cypress_baseUrl=https://dev.goole.com5 cypress run --env allure=true",
+    "cy:open-qa": "cypress_baseUrl=https://dev.goole.com5 cypress run --env allure=true",
+    "cy:run-stage": "cypress_baseUrl=https://stage.goole.com5 cypress run --env allure=true",
+    "cy:run-localEnv-allTest": "cypress_baseUrl=https://localhost:0000 cypress run \"cypress/integration/learn-in/**/\" allure = true"
   },
   "author": "Md Zaman",
   "license": "ISC",
