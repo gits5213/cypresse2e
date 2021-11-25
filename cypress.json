@@ -1,0 +1,34 @@
+{
+    "fileServerFolder": ".",
+    "fixturesFolder": "./src/fixtures",
+    "integrationFolder": "./src/integration",
+    "modifyObstructiveCode": false,
+    "pluginsFile": "./src/plugins/index",
+    "supportFile": "./src/support/index.js",
+    "videosFolder": "../../dist/cypress/apps/e2etest/videos",
+    "screenshotsFolder": "../../dist/cypress/apps/e2etest/screenshots",
+    "chromeWebSecurity": false,
+    "baseUrl":"http://the-internet.herokuapp.com/",
+    "headless": true,
+    "env": {
+      "loginRoute": "/login",
+      "username": "MICSES",
+      "Database": "MICSES"
+    },
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+      "reporterEnabled": "mochawesome",
+      "mochawesomeReporterOptions": {
+        "reportDir": "../../dist/cypress/apps/e2etest/reports",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      }
+    },
+    "video": true,
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "record": true
+  }
+  

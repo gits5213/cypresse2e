@@ -60,3 +60,7 @@
 > open terminal
 > open location/ag-934-ContractTableTextFilter.js.mp4
 ```
+## Allure Report configuration
+```
+- http://blog.geveo.com/Allure-Report-Integration-with-Cypress
+```
